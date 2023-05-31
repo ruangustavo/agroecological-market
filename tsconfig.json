@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
