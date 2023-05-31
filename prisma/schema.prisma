@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Measurement {
+  KG
+  PACK
+  UNIT
+}
+
+model Product {
+  id                String      @id @default(uuid())
+  image             String
+  title             String
+  description       String
+  price             Int
+  quantity_in_stock Measurement @default(UNIT)
+
+  @@map("products")
+}
