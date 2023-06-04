@@ -1,7 +1,8 @@
 import fastify from "fastify";
+import { productRoutes } from "./http/routes/product-routes";
 
 export const app = fastify();
 
-app.get("/", () => {
-  return { message: "Hello, world!" };
+app.register(productRoutes, {
+  prefix: "/products",
 });
